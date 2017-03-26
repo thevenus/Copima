@@ -7,6 +7,10 @@ Program: Copima
 import glob, os
 from shutil import copy2
 
+def file_name(f):
+    file_name = f.split('/')
+    return file_name[-1]
+
 # src for source folder which contains files
 # dst for destination folder which files will copied
 # filex for file extension
@@ -29,9 +33,14 @@ if (not os.path.exists(dst)):
     else:
         print "Copima is exiting..."
         exit(0)
-        
+
 #-------Getting files extension--------------------------------------------------------------------------------
 filex = raw_input("Type in your file extension(without dot in the beginning) that you want to copy from '%s'\n> " %src)
 
 for file in glob.glob('%s*%s'%(src,filex)):
     copy2(file, dst)
+    print " '%s' " %file_name(file)
+
+
+
+

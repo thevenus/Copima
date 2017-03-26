@@ -7,8 +7,8 @@ Program: Copima
 import glob, os
 from shutil import copy2
 
-# src for source folder which contains jpegs
-# dst for destination folder which jpegs will copied
+# src for source folder which contains files
+# dst for destination folder which files will copied
 # filex for file extension
 
 #-----Getting source directory---------------------------------------------------------------------------------
